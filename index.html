@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Conversão</title>
+</head>
+<body>
+    <main class="container">
+        <div class="calculator">
+            <form id="form" action="#">
+                <div class="title">
+                    <h1><span>Quanto você</span> quer enviar?</h1>                     
+                </div>
+                
+                <div class="input-group">
+                    <div id="input-send">
+                        <label for="send">Enviar</label>
+                        <div class="input-box">
+                            <img src="assets/img/br-flag.svg" class="flag">
+                            <span>BRL</span>
+                            <img src="assets/img/icon-divider.svg" class="flag">
+                            <input id="send" step="any" type="number" name="send" min='50.0' required>                      
+                        </div>
+                        <div class="error hidden">
+                            <i class="fa-solid fa-xmark"></i>
+                            <span id="error-message">O valo mínimo de envio é de BRL 50,00</span>
+                        </div> 
+                    </div>
+
+                    <div id="input-receive">
+                        <label for="receive">Irá receber</label>
+                        <div class="input-box-receive">
+                            <img src="assets/img/usa-flag.svg" class="flag">
+                            <span>USD</span>
+                            <img src="assets/img/icon-divider.svg" class="flag">
+                            <div id="receive">
+                                <p id="receive-value">0.0</p>
+                            </div>                     
+                        </div>
+                    </div>
+
+                <div id ="transparency">
+                    <i class="fa-solid fa-percent"></i>
+                    <p>Confira as taxas com transparência:</p>
+                </div>    
+
+                <div class="fee-box">
+                    <div class="fee-group">
+                        <div class="fees">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <span>Cotação comercial</span>
+                            <div class="tooltip-text">Cotação comercial é a cotação do dólar utilizada como referência em negociações do comércio exterior. Ela é atualizada a cada 1 minuto.</div>
+                        </div>
+                        <div class="fee-result">
+                            <span id="cotation-value">BRL 0.0</span>
+                        </div>
+                    </div>
+
+                    <div class="fee-group">
+                        <div class="fees">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <span>Taxas: 1%</span>
+                            <div class="tooltip-text">Nossa taxa aplicada sobre o valor da cotação para cobrir os custos operacionais das transações.</div>
+                        </div>
+                        <div class="fee-result">
+                            <span id="spread-value">BRL 0.0</span>
+                        </div>
+                    </div>
+
+                    <div class="fee-group">
+                        <div class="fees">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <span>IOF: 1,1%</span>
+                            <div class="tooltip-text">Imposto federal sobre operações financeiras, que incide sobre a soma do dólar comercial com a taxa de serviço</div>
+                        </div>
+                        <div class="fee-result">
+                            <span id="iof-value">BRL 0.0</span>
+                        </div>
+                    </div>
+
+                    <div class="fee-group">
+                        <div class="fees">
+                            <i class="fa-regular fa-circle-question"></i>
+                            <span>VET:</span>
+                            <div class="tooltip-text">É o valor final que você vai pagar por US$1, já considerando a cotação, taxa e imposto.</div>
+                        </div>
+                        <div class="fee-result">
+                            <span id="vet-value">BRL 0.0</span>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="button">
+                    <button id="get-cotation"><a href="#">Calcular</a></button>
+                </div> 
+
+            </form>
+
+        </div>
+
+    </main>
+<script src="script.js" async defer></script>
+
+</body>
+
+</html>
