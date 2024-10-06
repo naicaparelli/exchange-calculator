@@ -22,11 +22,11 @@
                             <img src="assets/img/br-flag.svg" class="flag">
                             <span>BRL</span>
                             <img src="assets/img/icon-divider.svg" class="flag">
-                            <input id="send" step="any" type="number" name="send" min='50.0' max ='1000000.0' required>                      
+                            <input id="send" step="any" type="text" name="send" min='50.0' max ='1000000.0' required>                      
                         </div>
-                        <div class="error hidden">
-                            <i class="fa-solid fa-xmark"></i>
-                            <span id="error-message">O valo mínimo de envio é de BRL 50,00</span>
+                        <div id="error">
+                            <!-- <i id ="error-icon" class="fa-solid fa-xmark"></i> -->
+                            <span id="error-message"></span>
                         </div> 
                     </div>
 
@@ -37,7 +37,7 @@
                             <span>USD</span>
                             <img src="assets/img/icon-divider.svg" class="flag">
                             <div id="receive">
-                                <p id="receive-value">0.0</p>
+                                <p id="receive-value">0,00</p>
                             </div>                     
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             <div class="tooltip-text">Cotação comercial é a cotação do dólar utilizada como referência em negociações do comércio exterior. Ela é atualizada a cada 1 minuto.</div>
                         </div>
                         <div class="fee-result">
-                            <span id="cotation-value">BRL 0.0</span>
+                            <span id="cotation-value">BRL 0,00</span>
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@
                             <div class="tooltip-text">Nossa taxa aplicada sobre o valor da cotação para cobrir os custos operacionais das transações.</div>
                         </div>
                         <div class="fee-result">
-                            <span id="spread-value">BRL 0.0</span>
+                            <span id="spread-value">BRL 0,00</span>
                         </div>
                     </div>
 
@@ -77,7 +77,7 @@
                             <div class="tooltip-text">Imposto federal sobre operações financeiras, que incide sobre a soma do dólar comercial com a taxa de serviço</div>
                         </div>
                         <div class="fee-result">
-                            <span id="iof-value">BRL 0.0</span>
+                            <span id="iof-value">BRL 0,00</span>
                         </div>
                     </div>
 
@@ -88,13 +88,13 @@
                             <div class="tooltip-text">É o valor final que você vai pagar por US$1, já considerando a cotação, taxa e imposto.</div>
                         </div>
                         <div class="fee-result">
-                            <span id="vet-value">BRL 0.0</span>
+                            <span id="vet-value">BRL 0,00</span>
                         </div>
                     </div> 
                 </div>
 
                 <div class="button">
-                    <button id="get-cotation"><a href="#">Calcular</a></button>
+                    <button type="submit" id="get-cotation" disabled><a href="#">Calcular</a></button>
                 </div> 
 
             </form>
