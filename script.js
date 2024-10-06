@@ -94,6 +94,7 @@ form.addEventListener('submit', async function(event) {
     console.log(`receive ${receive}`);
     receiveValue = parseFloat(receive).toFixed(2);
     receiveValue = receiveValue.replace('.',',');
+    receiveValue = receiveValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     console.log(`receiveValue ${receiveValue}`);
     document.getElementById('receive-value').textContent = `${receiveValue}`;
 
